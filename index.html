@@ -1,0 +1,140 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number</title>
+    <script language="JavaScript">
+      <!-- Begin
+      var RNumber
+      var RTries
+      limit = 50
+      function Random() {
+        today = new Date()
+        num = today.getTime()
+        num = Math.round(Math.abs(Math.sin(num) * 1000000)) % limit
+        return num
+      }
+      function Init() {
+        RNumber = Random()
+        RTries = 0
+        document.FGame.Output.value =
+          'I am thinking of a number between 0 and ' +
+          (limit - 1) +
+          ' Guess it....'
+        document.FGame.Tries.value = RTries
+        document.FGame.HighLow.value = ''
+        document.FGame.Input.value = ''
+      }
+      function Game(Number) {
+        if (Number == RNumber) {
+          RTries++
+          document.FGame.Output.value =
+            'You guessed it in ' +
+            RTries +
+            ' tries! It was ' +
+            RNumber +
+            '! Hit Restart to play again.'
+          document.FGame.HighLow.value = 'Got It!'
+        } else {
+          RTries++
+          document.FGame.Output.value =
+            'Nope, ' + Number + ' is not the number I am thinking about!'
+          document.FGame.HighLow.value = RNumber > Number ? 'Higher!' : 'Lower!'
+          document.FGame.Tries.value = RTries
+        }
+      }
+      // End -->
+    </script>
+  </head>
+  <body>
+    <center>
+      <form name="FGame">
+        <input type="txt" name="Output" value="" size="70" /><br />
+        <input type="txt" name="Input" value="" size="20" />
+        The number is:
+        <input type="txt" name="HighLow" value="" size="20" />
+        You guessed:
+        <input type="txt" name="Tries" value="0" size="3" /> Times.<br />
+        <input
+          type="button"
+          name="one"
+          value="  1  "
+          OnClick="FGame.Input.value += 1"
+        />
+        <input
+          type="button"
+          name="one"
+          value="  2  "
+          OnClick="FGame.Input.value += 2"
+        />
+        <input
+          type="button"
+          name="one"
+          value="  3  "
+          OnClick="FGame.Input.value += 3"
+        /><br />
+        <input
+          type="button"
+          name="one"
+          value="  4  "
+          OnClick="FGame.Input.value += 4"
+        />
+        <input
+          type="button"
+          name="one"
+          value="  5  "
+          OnClick="FGame.Input.value += 5"
+        />
+        <input
+          type="button"
+          name="one"
+          value="  6  "
+          OnClick="FGame.Input.value += 6"
+        /><br />
+        <input
+          type="button"
+          name="one"
+          value="  7  "
+          OnClick="FGame.Input.value += 7"
+        />
+        <input
+          type="button"
+          name="one"
+          value="  8  "
+          OnClick="FGame.Input.value += 8"
+        />
+        <input
+          type="button"
+          name="one"
+          value="  9  "
+          OnClick="FGame.Input.value += 9"
+        /><br />
+        <input
+          type="button"
+          name="one"
+          value="  0  "
+          OnClick="FGame.Input.value += 0"
+        />
+        <input
+          type="button"
+          name="DoIt"
+          value=" Try it!  "
+          OnClick="Game(FGame.Input.value); FGame.Input.value=''"
+        /><br />
+        <input
+          type="button"
+          name="init"
+          value="      Start/Restart     "
+          OnClick="Init()"
+        />
+      </form>
+    </center>
+    <br />
+    <p>
+      <center>
+        The computer will think of a random number between 0 and 49. Just guess
+        it! Higher and lower hints included!
+      </center>
+    </p>
+  </body>
+</html>
